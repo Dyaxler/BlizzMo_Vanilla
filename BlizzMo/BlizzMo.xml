@@ -40,6 +40,7 @@ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
 				local parent = this:GetParent()
 				local parentNum = strsub(parent:GetName(), 15)
 				parent:SetMovable(true)
+				parent:SetClampedToScreen(true)
 				if (not parent:IsUserPlaced()) then
 					parent:SetPoint("TOPLEFT", "UIParent", "BOTTOMRIGHT", -(380 + parentNum * 1), 250 + parentNum * 140)
 				end

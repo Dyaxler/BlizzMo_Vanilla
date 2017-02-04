@@ -404,8 +404,6 @@ local function OnEvent()
 		--SetMoveHandler(frameToMove, handler)
         if not IsAddOnLoaded("Auctioneer") then
             SetMoveHandler(AuctionFrame)
-        else
-            return
         end
         SetMoveHandler(BankFrame)
         -- Player Bags
@@ -442,20 +440,14 @@ local function OnEvent()
         SetMoveHandler(HelpFrame)
         if not IsAddOnLoaded("SuperInspect") then
             SetMoveHandler(InspectFrame)
-        else
-            return
         end
         SetMoveHandler(KeyBindingFrame)
         if not IsAddOnLoaded("XLoot") then
             SetMoveHandler(LootFrame)
-        else
-            return
         end
         SetMoveHandler(MerchantFrame)
         if not IsAddOnLoaded("SuperMacro") then
             SetMoveHandler(MacroFrame)
-        else
-            return
         end
         SetMoveHandler(MailFrame)
         SetMoveHandler(PetFrame)
@@ -463,21 +455,15 @@ local function OnEvent()
         SetMoveHandler(QuestFrame)
         if not IsAddOnLoaded("EQL3") then
             SetMoveHandler(QuestLogFrame)
-        else
-            return
         end
         SetMoveHandler(SpellBookFrame)
         SetMoveHandler(TalentFrame)
         if not IsAddOnLoaded("EnhancedFlightMap") then
             SetMoveHandler(TaxiFrame)
-        else
-            return
         end
         SetMoveHandler(TradeFrame)
         if not IsAddOnLoaded("AdvancedTradeSkillWindow") then
             SetMoveHandler(TradeSkillFrame)
-        else
-            return
         end
         CustomFrames()
 	-- Blizzard AddOns
