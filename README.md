@@ -43,6 +43,7 @@ You can even add your own custom mods to a table (requires some knowledge of LUA
 straight forward. Just follow the examples that I've already added support for. For your convience 
 the section of code is at the very bottom of BlizzMo.lua and it looks like this:
 
+````
 ---------------------------------------------------------------------------------------------------
 -- Add your custom frames from your mods here. If your mod has an XML, then look in there for the
 -- main parent frame. If not then you'll have to search through all the files for CreateFrame() to
@@ -58,6 +59,7 @@ function CustomFrames()
     SetMoveHandler(SuperInspectFrame)
     SetMoveHandler(XLootFrame)
 end
+````
 
 These are some of the mods that I use. Feel free to add or remove support for them. If you're not 
 using it, don't worry it won't cause any issues.
