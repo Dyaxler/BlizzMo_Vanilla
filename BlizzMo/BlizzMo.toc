@@ -1,0 +1,16 @@
+﻿## Interface: 11200
+## Title: BlizzMo
+## Notes: Move any Blizzard Frame
+## Author: Dyaxler
+## Version: 0.1
+## X-Email: dyaxler@hotmail.com
+## SavedVariables:
+## SavedVariablesPerCharacter: BlizzMoDB
+## Notes: Move or resize any Blizzard frame.
+## Notes-deDE: Verschieben oder ändern Sie die Größe eines Blizzard-Rahmens.
+## Notes-frFR: Déplacez ou redimensionnez n'importe quel cadre "Blizzard".
+## Notes-ruRU: Перемещение или изменение размеров любых "Blizzard" кадр.
+## Notes-zhCN: 移动或调整任何“Blizzard”帧。
+--Frames for OptionalDeps: EQL3_QuestLogFrame, ATSWFrame, SuperMacroFrame, EnhancedFlightMapFrame, AuctioneerFrame, SuperInspectFrame, XLootFrame
+## OptionalDeps: EQL3, AdvancedTradeSkillWindow, SuperMacro, EnhancedFlightMap, Auctioneer, SuperInspect, XLoot
+BlizzMo.xml

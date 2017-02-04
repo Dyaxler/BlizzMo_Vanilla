@@ -1,0 +1,62 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="BlizzMo.lua"/>
+	<Button name="GameMenuButtonBlizzMo" parent = "GameMenuFrame" inherits="GameMenuButtonTemplate" text="Reset BlizzMo!">
+		<Scripts>
+			<OnLoad>
+				GameMenu_AddButton(this)
+			</OnLoad>
+			<OnClick>
+				StaticPopup_Show("BLIZZMO_RESET_CONFIRM")
+			</OnClick>
+		</Scripts>
+	</Button>
+	
+	<Button name="BMDragBarTemplate" virtual="true" frameLevel="5">
+		<Scripts>
+			<OnLoad>
+				this:GetParent():SetMovable(true)
+			</OnLoad>
+			<OnMouseDown>
+				this:GetParent():StartMoving()
+			</OnMouseDown>
+			<OnMouseUp>
+				this:GetParent():StopMovingOrSizing()
+			</OnMouseUp>
+		</Scripts>
+	</Button>
+
+	<Button name="ContainerDragBar" inherits="BMDragBarTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="123" y="22"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset><AbsDimension x="42" y="-5"/></Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnLoad>
+				local parent = this:GetParent()
+				local parentNum = strsub(parent:GetName(), 15)
+				parent:SetMovable(true)
+				if (not parent:IsUserPlaced()) then
+					parent:SetPoint("TOPLEFT", "UIParent", "BOTTOMRIGHT", -(380 + parentNum * 1), 250 + parentNum * 140)
+				end
+			</OnLoad>
+		</Scripts>
+	</Button>
+	
+	<Button name="BMDrag1" inherits="ContainerDragBar" parent="ContainerFrame1" id="1"/>
+	<Button name="BMDrag2" inherits="ContainerDragBar" parent="ContainerFrame2" id="2"/>
+	<Button name="BMDrag3" inherits="ContainerDragBar" parent="ContainerFrame3" id="3"/>
+	<Button name="BMDrag4" inherits="ContainerDragBar" parent="ContainerFrame4" id="4"/>
+	<Button name="BMDrag5" inherits="ContainerDragBar" parent="ContainerFrame5" id="5"/>
+	<Button name="BMDrag6" inherits="ContainerDragBar" parent="ContainerFrame6" id="6"/>
+	<Button name="BMDrag7" inherits="ContainerDragBar" parent="ContainerFrame7" id="7"/>
+	<Button name="BMDrag8" inherits="ContainerDragBar" parent="ContainerFrame8" id="8"/>
+	<Button name="BMDrag9" inherits="ContainerDragBar" parent="ContainerFrame9" id="9"/>
+	<Button name="BMDrag10" inherits="ContainerDragBar" parent="ContainerFrame10" id="10"/>
+	<Button name="BMDrag11" inherits="ContainerDragBar" parent="ContainerFrame11" id="11"/>
+	<Button name="BMDrag12" inherits="ContainerDragBar" parent="ContainerFrame12" id="12"/>
+</Ui>
