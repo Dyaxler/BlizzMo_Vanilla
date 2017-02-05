@@ -154,6 +154,8 @@ local function OnShow()
         KeyBindingFrame_OnShow()
     elseif this == MacroFrame then
         MacroFrame_OnShow()
+    elseif this == SuperMacroFrame then
+        SuperMacroFrame_OnShow()
     elseif this == HelpFrame then
         HelpFrame_OnShow()
     elseif this == MailFrame then
@@ -438,17 +440,13 @@ local function OnEvent()
         SetMoveHandler(FriendsFrame, RaidFrame)
         SetMoveHandler(GossipFrame)
         SetMoveHandler(HelpFrame)
-        if not IsAddOnLoaded("SuperInspect") then
-            SetMoveHandler(InspectFrame)
-        end
+        SetMoveHandler(InspectFrame)
         SetMoveHandler(KeyBindingFrame)
         if not IsAddOnLoaded("XLoot") then
             SetMoveHandler(LootFrame)
         end
         SetMoveHandler(MerchantFrame)
-        if not IsAddOnLoaded("SuperMacro") then
-            SetMoveHandler(MacroFrame)
-        end
+        SetMoveHandler(MacroFrame)
         SetMoveHandler(MailFrame)
         SetMoveHandler(PetFrame)
         SetMoveHandler(PetStableFrame)
@@ -458,9 +456,7 @@ local function OnEvent()
         end
         SetMoveHandler(SpellBookFrame)
         SetMoveHandler(TalentFrame)
-        if not IsAddOnLoaded("EnhancedFlightMap") then
-            SetMoveHandler(TaxiFrame)
-        end
+        SetMoveHandler(TaxiFrame)
         SetMoveHandler(TradeFrame)
         if not IsAddOnLoaded("AdvancedTradeSkillWindow") then
             SetMoveHandler(TradeSkillFrame)
@@ -929,6 +925,5 @@ function CustomFrames()
     SetMoveHandler(SuperMacroFrame)
     SetMoveHandler(EnhancedFlightMapFrame)
     SetMoveHandler(AuctioneerFrame)
-    SetMoveHandler(SuperInspectFrame)
     SetMoveHandler(XLootFrame)
 end
